@@ -1,0 +1,69 @@
+<div class="pane upgrades" data-bind="visible: game.current_pane() === 'upgrades'">
+    <div class="table_holder">
+        <p class="upgrade_title">
+            Spend Arcana to increase the effective value of a stat on all crystals.
+        </p>
+        <p class="experience">Experience gained from spent Arcana: <span class="experience" data-bind="text: game.arcana_spent().formatBig()"></span></p>
+        <a class="pane_button buy_one_each" data-bind="
+            click: function(data, ev) {
+                game.buy_every_upgrade(1);
+            }">Buy x1 of each</a>
+        <table class="shop_table noselect">
+            <thead>
+                <th>Name</th>
+                <th>Level</th>
+                <th>Bonus</th>
+                <th>Next Cost</th>
+                <th>Next Bonus</th>
+                <th>Description</th>
+            </thead>
+            <tbody>
+        <!-- ko foreach: {
+            data: _.chain(game.upgrades_list()).filter(function(ug) { return ug.available(game); }).value(),
+            as: 'ug'
+        } -->
+
+            <tr class="upgrade available_upgrade" data-bind="
+                click: function(data, ev) {
+                    if(ev.mouseButton != 2)
+                        game.buy_upgrade(ug,ev);
+                    ev.currentTarget.tabIndex = 0;
+                    ev.currentTarget.focus();
+                },
+                right_click: function(ev) {
+                    game.unbuy_upgrade(ug,ev);
+                },
+                css: ug.css(game),
+                event: {
+                    keypress: function(data, ev) {
+                        if(ev.keyCode == 13)
+                            ev.currentTarget.click(data, ev);
+                    },
+                    focusout: function(data, ev) {
+                        ev.currentTarget.tabIndex = -1;
+                    }
+                }
+            ">
+                <td class="name">
+                    <span data-bind="css: 'glyph-'+ug.mech().props().noun.toLowerCase() + ' small-glyph'"></span>&nbsp;<span data-bind="text: ug.name()"></span>
+                </td>
+                <td class="points">
+                    <span data-bind="text: ug.points()"></span>
+                    <!-- ko if: ug.max_points(game) !== Infinity -->
+                    / <span data-bind="text: ug.max_points(game)"></span>
+                    <!-- /ko -->
+                </td>
+                <td class="current_factor" data-bind="text: ug.boost_factor().formatByPercent()"></td>
+                <td class="arcana_cost" data-bind="text: ug.arcana_cost().formatBig()"></td>
+                <td class="next_increase" data-bind="
+                    text: (ug.boost_factor(ug.points() + 1) - ug.boost_factor() + 1).formatByPercent()
+                "></td>
+                <td class="description">
+                    Boosts the effective value of <span data-bind="text: ug.mech().props().noun"></span>.
+                </td>
+            </tr>
+        <!-- /ko -->
+            </tbody>
+        </table>
+    </div>
+</div>

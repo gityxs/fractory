@@ -1,0 +1,57 @@
+Beta 0.9.5 07.11.2022
+
+Talents that increase the tier of Conjured crystals are now capped by the tier that you reached via infusion
+Made shop tables keep focus so you can click on an upgrade\talent and then hold enter\space to rapidly buy more. Remember that you can shift-click Enchantment upgrades to buy as many as possible
+Fixed some bugs in keybindings
+Made the Core part undraggable
+Blocking google analytics doesn't crash the game anymore
+
+
+Beta 0.9.4 04.11.2022
+
+Added a changelog tab
+Added a help tab
+Added small coloured glyphs to upgrades and talents panes
+Fixed shop crystals getting stuck when you can't afford them
+Fixed core crystal getting stuck when trying to drag it away
+Changed up the UI a bit
+Tooltips have slightly larger font, can be much wider, and avoid getting in the way while staying fully visible
+Special functional crystals now have their name in the tooltip's title
+
+
+Beta 0.9.3 05.12.2016
+
+Finalised the hotkeys, they are now saved and loaded, have safeguards against conflicts, properly show up in controls pane
+
+
+Beta 0.9.3 04.12.2016
+
+Rewrote the Controls pane properly, now uses the same code as the rest of the panes
+Made all hotkeys rebindable!
+They are not saved yet, however, and will revert to defaults on every page refresh
+
+
+Beta 0.9.2 01.12.2016
+
+Added the blank generator gem, keybinds to place it and talents for it!
+Changed the method for buying maximum arcana upgrades at once to non-looped
+
+
+Beta 0.9.1 01.12.2016
+
+Made the maximum inventory size 3 columns by 7 rows, each point in 'bigger inventory' grants 3 slots, you start with 6
+Reworked the code in keybindings to accomodate shift\ctr\alt modifiers for later
+Hotkeys for buying crystals are now usable inside the inventory
+Crystals can now be bought from the shop into your inventory by right clicking
+Tooltips now shouldn't go offscreen and follow your mouse smoothly
+
+
+Beta 0.9.1 28.11.2016
+
+Added a pane to show controls, check it out to see the added hotkeys
+Added the ability to scroll through simple crystal types and crystal tiers using mousewheel (both forward and backwards) - hover over the ">" button and scroll for types, hover over the tier plate for tiers
+Fixed simple crystal types getting stuck
+Fixed self-modifying crystals (power, lens, etc.)
+Changed the styles in fractory.html to keep shop slots from bouncing around at high tiers (smaller font + wider slots)
+Added the ability to quickly activate\deactivate links (hold shift\ctrl and move the mouse over them)
+Holding shift when buying Enchanting upgrades now buys as many as you can in one click

@@ -1,0 +1,11 @@
+<div class="saved_link_pattern" data-bind="
+	right_click: _.bind(game.forget_link_pattern, link_pattern),
+    event: {
+        click: function(ev) { game.keybindings.paste_fractal_links(link_pattern); }
+    }
+">
+	<div class="saved_link_pattern_raph" data-bind="
+		raphael: _.bind(game.testRaph, link_pattern)
+	">
+	</div>
+</div>

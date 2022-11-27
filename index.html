@@ -1,0 +1,94 @@
+<html>
+<head>
+
+	<script type="text/javascript" src="libs/jquery-1.10.2.js"></script>
+	<script type="text/javascript" src="libs/classy/classy.js"></script>
+	<link href="libs/jquery-ui-1.10.3.custom/css/custom-theme/jquery-ui-1.10.3.custom.css" rel="stylesheet">
+	<link href="libs/qtip/jquery.qtip.css" rel="stylesheet">
+	<script src="libs/jquery-ui-1.10.3.custom/js/jquery-ui-1.10.3.custom.js"></script>
+	<script src="libs/underscore.js"></script>
+
+	<link rel="stylesheet" type="text/css" href="libs/game-icons/game-icons.css" />
+	<link rel="stylesheet/less" type="text/css" href="less/style.less" />
+	<link rel="stylesheet/less" type="text/css" href="less/glyphs.less" />
+	<link rel="stylesheet/less" type="text/css" href="less/links_anim.less" />
+	<script type="text/javascript">less = { env: 'development' };</script>
+	<script type="text/javascript" src="libs/less-1.3.3.min.js"></script>
+
+	<script type="text/javascript" src="libs/knockout-3.5.1.js"></script>
+	<script type="text/javascript" src="libs/raphael.min.js"></script>
+	<script type="text/javascript" src="libs/interact.min.js"></script>
+
+	<script type="text/javascript" src="libs/qtip/jquery.qtip.min.js"></script>
+
+	<script src="libs/icejs/ice.js"></script>
+	<script src="libs/icejs/ko_extenders.js"></script>
+	<script src="libs/icejs/templates.js"></script>
+	<script src="libs/icejs/point.js"></script>
+	<script src="libs/icejs/trig.js"></script>
+
+	<script src="libs/icejs/tooltips.js"></script>
+	<script src="libs/icejs/controller.js"></script>
+	<script src="libs/icejs/utils.js"></script>
+	<script src="libs/icejs/rand.js"></script>
+
+	<script src="js/roman.js"></script>
+	<script src="js/analytics.js"></script>
+
+	<script src="js/manacolors.js"></script>
+	<script src="js/ko_bindings.js"></script>
+	<script src="js/inventoryslot.js"></script>
+	<script src="js/shop_slot.js"></script>
+	<script src="js/trash_slot.js"></script>
+	<script src="js/node.js"></script>
+	<script src="js/shell.js"></script>
+	<script src="js/link.js"></script>
+	<script src="js/part.js"></script>
+	<script src="js/junction.js"></script>
+	<script src="js/junctionanim.js"></script>
+	<script src="js/mechs.js"></script>
+	<script src="js/research.js"></script>
+	<script src="js/talent.js"></script>
+	<script src="js/upgrade.js"></script>
+	<script src="js/boost.js"></script>
+	<script src="js/main.js"></script>
+	<script src="libs/mousetrap.min.js"></script>
+	<script src="libs/mousetrap-record.min.js"></script>
+	<script src="js/keybinds.js"></script>
+
+	<script type="text/html" kot="kot/game.html"></script>
+	<script type="text/html" kot="kot/part.html"></script>
+	<script type="text/html" kot="kot/inventory_slot.html"></script>
+	<script type="text/html" kot="kot/trash_slot.html"></script>
+	<script type="text/html" kot="kot/part_tooltip.html"></script>
+	<script type="text/html" kot="kot/panes/stats_pane.html"></script>
+	<script type="text/html" kot="kot/panes/shop_pane.html"></script>
+	<script type="text/html" kot="kot/panes/research_pane.html"></script>
+	<script type="text/html" kot="kot/panes/upgrades_pane.html"></script>
+	<script type="text/html" kot="kot/panes/talents_pane.html"></script>
+    <script type="text/html" kot="kot/panes/controls_pane.html" ></script>
+    <script type="text/html" kot="kot/panes/changelog_pane.html" ></script>
+    <script type="text/html" kot="kot/panes/help_pane.html" ></script>
+	<script type="text/html" kot="kot/shop_bar.html"></script>
+	<script type="text/html" kot="kot/status_bar.html"></script>
+	<script type="text/html" kot="kot/link_pattern.html"></script>
+
+</head>
+<body>
+	<div id="game_render" data-bind="template: { name: 'kot/game.html', data: game, as: 'game' }"></div>
+	<div id="scene_holder"></div>
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-87727098-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+</body>
+</html>
+
