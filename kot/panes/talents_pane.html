@@ -2,7 +2,7 @@
     <p class="experience">Experience gained from enchanting: <span class="experience" data-bind="text: game.arcana_spent().formatBig()"></span></p>
     <div class="ascend_block noselect" data-bind="
                 click: function() {
-                    var conf = window.confirm('Ascending will destroy all crystals and upgrades, granting experience equal to your spent arcana.  Are you sure?  (Protip: your first ascent should be to level 3.)');
+                    var conf = window.confirm('转生会摧毁所有水晶和升级，获得与你消耗的奥术相等的经验。 你确定吗？ （提示：你的第一次转生应该是在 3 级。）');
                     if(conf) game.ascend();
                 }
             ">
@@ -56,7 +56,7 @@
         <p>
             <button data-bind="
                 click: function() {
-                    var conf = window.confirm('You can reset your spent talent points, but it will force an ascension at the same time.  Are you sure?');
+                    var conf = window.confirm('你可以重置你消耗的天赋点，但它会同时强制转生。 你确定吗？');
                     if(!conf) return;
                     _.each(game.talents_list(), function(tal) { tal.points(0); });
                     game.ascend();

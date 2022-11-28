@@ -14,7 +14,7 @@ KeyBindings = Ice.$extend('KeyBindings', {
     
     reset_to_defaults: function() {
         var self = this;
-        if(window.confirm("This will reset all the hotkeys to their defaults, continue?")) {
+        if(window.confirm("这会将所有快捷键重置为默认值，继续吗？")) {
             _.each(self.binds(), function(keybind){
                 Mousetrap.unbind(keybind.key());
                 keybind.key(keybind.default);
@@ -117,7 +117,7 @@ KeyBindings = Ice.$extend('KeyBindings', {
                 return;
             }
             
-            var conf = window.confirm('"'+ unlocked(same_key_binding) ? same_key_binding.description : 'An action not yet unlocked' + '" is already bound to '+new_key+', it will be returned to default or unbound!');
+            var conf = window.confirm('"'+ unlocked(same_key_binding) ? same_key_binding.description : '一个尚未解锁的动作' + '" 已经绑定到 '+new_key+', 它将返回默认值或未绑定!');
             if(conf) {
                 Mousetrap.unbind(old_key);
                 Mousetrap.unbind(new_key);
