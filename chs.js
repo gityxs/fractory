@@ -213,7 +213,7 @@ var cnItems = {
     "Place a simple Waxing crystal.": "放置一个简单的打蜡水晶。",
     "Radiance": "辐射",
     "Reflection": "反射",
-    "Relay": "中继",
+    "Relay": "继电器",
     "Relay Crystal": "继电器水晶",
     "Relays": "继电器",
     "Unlocks capacitors, which automatically move parts downstream when they're done improving.": "解锁电容器，当零件改进完成后，电容器会自动将零件向下游移动。",
