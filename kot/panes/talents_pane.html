@@ -2,7 +2,7 @@
     <p class="experience">Experience gained from enchanting: <span class="experience" data-bind="text: game.arcana_spent().formatBig()"></span></p>
     <div class="ascend_block noselect" data-bind="
                 click: function() {
-                    var conf = window.confirm('转生会摧毁所有水晶和升级，获得与你消耗的奥术相等的经验。 你确定吗？ （提示：你的第一次转生应该是在 3 级。）');
+                    var conf = window.confirm('转生会摧毁所有水晶和升级，获得与你消耗奥秘相等的经验。 你确定吗？ （提示：你的第一次转生应该是在 3 级。）');
                     if(conf) game.ascend();
                 }
             ">
